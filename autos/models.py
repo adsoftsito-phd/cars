@@ -9,7 +9,7 @@ class Auto(models.Model):
     transmision = models.TextField(default='Manual', blank = False)
     version = models.TextField(default='standard', blank = False)
     precio = models.DecimalField(default=0, max_digits=15, decimal_places=2, blank = False)
-    numero_cilindros = models.PositiveSmallIntegerField(default=4, blank = False)
-    numero_puertas = models.PositiveSmallIntegerField(default=4, blank = False)
+    numerocilindros = models.PositiveSmallIntegerField(default=4, blank = False)
+    numeropuertas = models.PositiveSmallIntegerField(default=4, blank = False)
     combustible = models.TextField(default='Gasolina', blank = False)
 
