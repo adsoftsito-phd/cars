@@ -26,8 +26,8 @@ class CreateAuto(graphene.Mutation):
     transmision =  graphene.String()
     version =  graphene.String()
     precio = graphene.Float()
-    numero_cilindros = graphene.Int()
-    numero_puertas =  graphene.Int()
+    numerocilindros = graphene.Int()
+    numeropuertas =  graphene.Int()
     combustible =  graphene.String()
 
 
@@ -56,23 +56,23 @@ class CreateAuto(graphene.Mutation):
                      transmision=transmision, 
                      version=version, 
                      precio=precio, 
-                     numero_clindros=numerocilindros, 
-                     numero_puertas=numeropuertas,
+                     numerocilindros=numerocilindros, 
+                     numeropuertas=numeropuertas,
                      combustible=combustible
                      )
         auto.save() # insert into Auto(...) values (....)
 
-        return CreateLink(
+        return CreateAuto(
             id= auto.id,
             modelo= auto.modelo, 
-            description= auto.description, 
+            descripcion= auto.descripcion, 
             serie= auto.serie, 
             color= auto.color,
             transmision= auto.transmision, 
             version= auto.version, 
             precio= auto.precio, 
-            numero_clindros= auto.numero_cilindros, 
-            numero_puertas= auto.numero_puertas,
+            numerocilindros= auto.numerocilindros, 
+            numeropuertas= auto.numeropuertas,
             combustible= auto.combustible
         )
 
@@ -80,3 +80,7 @@ class CreateAuto(graphene.Mutation):
 #4
 class Mutation(graphene.ObjectType):
     create_auto = CreateAuto.Field()
+
+
+schema = graphene.Schema(query=Query, mutation=Mutation)
+
