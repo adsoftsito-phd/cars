@@ -62,10 +62,10 @@ class CreateAuto(graphene.Mutation):
                      )
         auto.save() # insert into Auto(...) values (....)
 
-        return CreateLink(
+        return CreateAuto(
             id= auto.id,
             modelo= auto.modelo, 
-            description= auto.description, 
+            descripcion= auto.descripcion, 
             serie= auto.serie, 
             color= auto.color,
             transmision= auto.transmision, 
