@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ name: adsoftsito-config
+ labels:
+   app: postgres
+data:
+ PROD_SECRET_KEY: i-love-adsoftsito-dev
+ PROD_DATABASE: yvcfkhqm
+ PROD_USER: yvcfkhqm
+ PROD_PASSWORD: a0qkncXy9LrUeFVMDUg7L4-II6anlKUP
+ PROD_HOST: jelani.db.elephantsql.com 
+ PROD_PORT: "5432"
