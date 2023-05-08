@@ -5,6 +5,6 @@ RUN mkdir /cars
 WORKDIR /cars
 COPY requirements.txt /cars/
 RUN pip install -r requirements.txt
-COPY . /hackernews/
+COPY . /cars/
 CMD python manage.py runserver --settings=settings.production 0.0.0.0:8080
 
