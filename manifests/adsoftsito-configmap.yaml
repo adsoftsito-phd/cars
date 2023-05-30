@@ -5,12 +5,12 @@ metadata:
  labels:
    app: postgres
 data:
- DEV_SECRET_KEY: MYDEVSECRETKEY
- DEV_DATABASE: MYDEVDATABASE
- DEV_USER: MYDEVUSER
- DEV_PASSWORD: MYDEVPASSWORD
- DEV_HOST: MYDEVHOST
- DEV_PORT: MYDEVPORT
+ DEV_SECRET_KEY: i-love-adsoftsito-dev
+ DEV_DATABASE: yvcfkhqm
+ DEV_USER: yvcfkhqm
+ DEV_PASSWORD: a0qkncXy9LrUeFVMDUg7L4-II6anlKUP
+ DEV_HOST: jelani.db.elephantsql.com
+ DEV_PORT: 5432
  PROD_SECRET_KEY: i-love-adsoftsito-dev
  PROD_DATABASE: yvcfkhqm
  PROD_USER: yvcfkhqm
