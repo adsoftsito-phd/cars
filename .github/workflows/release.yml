@@ -65,20 +65,20 @@ jobs:
       with:
         token: ${{secrets.OKTETO_TOKEN }}
 
-    - name: Deploy and Wait
-      uses: okteto/actions/deploy@v1
-      env:
-          KUBECONFIG: ${{ steps.namespace.outputs.kubeconfig }}
-      with:
-          namespace: ${{secrets.OKTETO_NAMESPACE }}
-          manifest: -k manifests/ 
-          tag: ${{ secrets.DOCKER_USERNAME }}/${{secrets.MODEL_NAME}}:${{github.sha}}
+#    - name: Deploy and Wait
+#      uses: okteto/actions/deploy@v1
+#      env:
+#          KUBECONFIG: ${{ steps.namespace.outputs.kubeconfig }}
+#      with:
+#          namespace: ${{secrets.OKTETO_NAMESPACE }}
+#          manifest: -k manifests/ 
+#          tag: ${{ secrets.DOCKER_USERNAME }}/${{secrets.MODEL_NAME}}:${{github.sha}}
    
-    # - name: Deploy
-    #  uses: okteto/pipeline@2.7.0
-    #  with:
-    #    name: adsoftsito # cambiar por su namespace
-    #    timeout: 10m
+    - name: Deploy
+      uses: okteto/pipeline@2.7.0
+      with:
+        name: adsoftsito-phd # cambiar por su namespace
+        timeout: 10m
      
       
       
