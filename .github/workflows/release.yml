@@ -71,7 +71,7 @@ jobs:
           KUBECONFIG: ${{ steps.namespace.outputs.kubeconfig }}
       with:
           namespace: ${{secrets.OKTETO_NAMESPACE }}
-          manifest: manifests/adsoftsito.yml
+          manifest: manifests/
           tag: ${{ secrets.DOCKER_USERNAME }}/${{secrets.MODEL_NAME}}:${{github.sha}}
    
     # - name: Deploy
