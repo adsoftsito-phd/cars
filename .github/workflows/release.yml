@@ -47,7 +47,7 @@ jobs:
       run: python manage.py test --settings=settings.testing -v 3 --keepdb
       
     - name: update DEV_SECRET_KEY
-      run: sed -i 's/MYDEVSECRETKEY/${{ secrets.DEV_SECRET_KEY }}/g' manifests/adsoftsito-configmap.yaml      
+      run: sed -i 's/{MYDEVSECRETKEY}/${{ secrets.DEV_SECRET_KEY }}/g' manifests/adsoftsito-configmap.yaml      
     - name: update MY_DEV_DATABASE
       run: sed -i 's/MYDEVDATABASE/${{ secrets.DEV_DATABASE }}/g' manifests/adsoftsito-configmap.yaml      
     - name: update MY_DEV_USER
